@@ -1,5 +1,5 @@
 class GroupreviewsController < ApplicationController
-    def index
+  def index
     @groupreviews = GroupReview.all
   end
 end
