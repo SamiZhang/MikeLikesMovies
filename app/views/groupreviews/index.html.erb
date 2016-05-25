@@ -1,0 +1,11 @@
+<h1>Mike Likes Movies</h1>
+<h2>Most recent reviews</h2>
+
+<% @groupreviews.each do |groupreview| %>
+  <div>
+    <h3>Reviewed by: <%= groupreview.group.group_name %></h3>
+    <img src=<%= groupreview.movie.poster_image %>>
+    <%= time_since(groupreview.created_at) %>
+  </div>
+  <%end %>
+
