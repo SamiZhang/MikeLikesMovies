@@ -1,12 +1,13 @@
 
 <h2>Most recent reviews</h2>
-
+<div id="main-card">
 <% @groupreviews.each do |groupreview| %>
 <a href="/groupreviews/<%=groupreview.id%>">
     <div class="movie-cards">
-    <div id="group-name"><h3>Reviewed by: <%= groupreview.group.group_name %></h3></div>
     <img id="movie-poster-cards" src=<%= groupreview.movie.poster_image %>>
+    <div id="group-name">Reviewed by: <%= groupreview.group.group_name %></h3></div>
     <div id="time"><%= time_since(groupreview.created_at) %></div>
     </div>
 </a>
   <%end %>
+</div>
