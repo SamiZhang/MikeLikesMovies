@@ -15,7 +15,14 @@ class UserController < ApplicationController
   end
 
   def set_password
-
+    @user.find_by(email: params[:email])
+    if params[:token] == @user.token
+      @user.password = params[:password]
+      @user.save
+      redirect_to login_path
+    else
+      redirect_to root_path
+    end
   end
 
   private

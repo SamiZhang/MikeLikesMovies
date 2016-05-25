@@ -1,0 +1,8 @@
+<img src= <%= @groupreview.movie.poster_image %> <class = "movie-poster"  >
+
+<% @groupreview.reviews.each do |review| %>
+<div class="reviews">
+<h2><%= review.title %></h2>
+<p> <%= review.body %> </p>
+</div>
+<%end%>
