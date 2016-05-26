@@ -1,0 +1,20 @@
+<h1>Login</h1>
+<%= form_tag login_path do %>
+
+<div>
+<% if flash.any? %>
+  <% flash.each do |message_type, message| %>
+    <%=message_type%> <%=message%>
+  <% end %>
+<% end %>
+</div>
+
+<%= label_tag :email %>
+<%= text_field_tag :email, params[:email] %>
+
+<%= label_tag :password %>
+<%= password_field_tag :password, params[:password]%>
+
+<%= submit_tag "Sign in" %>
+
+<%end%>

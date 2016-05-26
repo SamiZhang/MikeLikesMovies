@@ -1,0 +1,28 @@
+#logo img {
+  height: 300px;
+  width: 450px;
+}
+
+#header {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 25px;
+  display:inline block;
+}
+
+nav {
+  right: 15px;
+  top:0;
+  position:absolute;
+  font-family: helvetica;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: red
+}
