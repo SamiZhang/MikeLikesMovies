@@ -10,10 +10,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.add_token
+    @tempass = SecureRandom.hex(4)
+    @user.password = @tempass
     @group = Group.find(params[:group_id])
      if @user.save
        Reviewer.create(user_id: @user.id, group_id: @group.id)
-       UserMailer.invite_mailer(@user).deliver_later
+       UserMailer.invite_mailer(@user, @tempass).deliver_later
        redirect_to root_path
     else
       render :new
