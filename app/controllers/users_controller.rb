@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def new
+    @group = Group.find(params[:group_id])
     @user = User.new
     render :new
   end
@@ -9,8 +10,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.add_token
+    @group = Group.find(params[:group_id])
      if @user.save
-       UserMailer.invite_mailer(@user).deliver_now
+       Reviewer.create(user_id: @user.id, group_id: @group.id)
+       UserMailer.invite_mailer(@user).deliver_later
        redirect_to root_path
     else
       render :new
