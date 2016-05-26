@@ -1,9 +1,16 @@
-<% if !review_completed?(@review) %>
-  <%= link_to "Edit this review", "/reviews/#{@review.id}/edit" %>
-<% else %>
-   <h2>This review is already published and cannot be edited </h2>
-<% end %>
+<% if @review.title.length > 1 $$ @review.body.length > 1%>
+  <% if !review_completed?(@review) %>
+    <%= link_to "Edit this review", "/reviews/#{@review.id}/edit" %>
+  <% else %>
+     <h2>This review is already published and cannot be edited </h2>
+  <% end %>
 
-<%= @review.title %>
-<br>
-<%= @review.body %>
+  <%= @review.title %>
+  <br>
+  <%= @review.body %>
+<% else %>
+  <h2> Looks like you haven't done this review yet,
+    better do it soon so you dont dissapoint Mike </h2>
+
+  
+<% end %>
