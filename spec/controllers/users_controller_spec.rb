@@ -4,29 +4,29 @@ RSpec.describe UsersController, type: :controller do
 
   describe "GET #new" do
       it "assigns a empty new user" do
-        get :new
+        get :new, { group_id: 2 }
         expect(assigns(:user)).to be_a(User)
       end
   end
 
   describe "POST #create" do
     it "creates a new user with an email" do
-      post :create, {user: {email: "test@test.test"}}
+      post :create, {user: {email: "test@test.test"}, group_id: 2 }
       expect(assigns(:user).email).to be_a(String)
     end
 
     it "gives the created user a token" do
-      post :create, {user: {email: "test@test.test"}}
+      post :create, {user: {email: "test@test.test"}, group_id: 2 }
       expect(assigns(:user).token.length).to eq(24)
     end
 
     it "redirects the user appropriatly when provided valid params" do
-      post :create, {user: {email: "test@test.test"}}
-      expect(:user).to redirect_to("/login")
+      post :create, {user: {email: "test@test.test"}, group_id: 2 }
+      expect(:user).to redirect_to("/")
     end
 
     it "redirects the user appropriatly when --not-- provided valid params" do
-      post :create, {user: {email: "t"}}
+      post :create, {user: {email: "t"}, group_id: 2 }
       expect(:user).to render_template(:new)
     end
   end
