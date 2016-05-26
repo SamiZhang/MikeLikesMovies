@@ -8,6 +8,7 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     @user.add_token
      if @user.save
+       UserMailer.invite_email(@user).deliver_later
        redirect_to root_path
     else
       render :new
