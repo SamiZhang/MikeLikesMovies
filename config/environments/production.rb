@@ -9,11 +9,11 @@ config.action_mailer.default_url_options = {host: 'mikelikesmovies.herokuapp.com
 # SMTP settings for gmail
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
- :address              => "smtp.sendgrid.com",
+ :address              => "smtp.gmail.com",
  :port                 => 587,
  :domain              => 'heroku.com',
- :user_name            => ENV['SENDGRID_USERNAME'],
- :password             => ENV['SENDGRID_PASSWORD'],
+ :user_name            => 'mikelikesmoviesalot@gmail.com',
+ :password             => 'mikesmovies',
  :authentication       => "plain",
 :enable_starttls_auto => true,
 :openssl_verify_mode => 'none'
