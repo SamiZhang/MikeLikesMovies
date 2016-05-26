@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @reviews = Review.find_by(user_id: params[:id])
+  end
+
   def set_password
     @user.find_by(email: params[:email])
     if params[:token] == @user.token

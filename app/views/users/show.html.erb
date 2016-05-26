@@ -1,1 +1,5 @@
-show.html.erb
+<h2> these are reviews you've done </h2>
+
+<% @reviews.each do |review| %>
+  <h4> <%= review.title %> </h4>
+<% end %>
