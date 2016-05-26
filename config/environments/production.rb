@@ -4,6 +4,19 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+
+config.action_mailer.default_url_options = {host: 'mikelikesmovies.herokuapp.com'}
+# SMTP settings for gmail
+config.action_mailer.delivery_method = :stmp
+config.action_mailer.smtp_settings = {
+ :address              => "smtp.sendgrid.com",
+ :port                 => 587,
+ :domain              => 'heroku.com'
+ :user_name            => ENV['SENDGRID_USERNAME'],
+ :password             => ENV['SENDGRID_PASSWORD'],
+ :authentication       => "plain",
+:enable_starttls_auto => true
+}
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.

@@ -1,4 +1,7 @@
 class UserMailer < ApplicationMailer
+  default from: "from@example.com"
+  layout 'mailer'
+
   def invite_mailer(user, tempass)
     @user = user
     @tempass = tempass

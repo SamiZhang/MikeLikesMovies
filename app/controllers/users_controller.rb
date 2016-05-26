@@ -15,8 +15,8 @@ class UsersController < ApplicationController
     @group = Group.find(params[:group_id])
      if @user.save
        Reviewer.create(user_id: @user.id, group_id: @group.id)
-       UserMailer.invite_mailer(@user, @tempass).deliver_later
-       redirect_to root_path
+       UserMailer.invite_mailer(@user, @tempass).deliver
+       redirect :'/'
     else
       render :new
     end
