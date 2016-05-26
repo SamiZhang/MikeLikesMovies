@@ -1,6 +1,6 @@
-<h1> Mike, invite some people to review some movies. </h2>
+<h1> Mike, invite some people to the group! </h2>
 
-<%= form_for @user do |f| %>
+<%= form_for [@group, @user] do |f| %>
   <%= f.label(:email, "Email") %>
   <%= f.text_field(:email) %>
   <%= f.submit("Invite!") %>

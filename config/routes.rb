@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :reviews
   resources :groupreviews
   resources :users
+  resources :groups do
+    resources :users
+  end
+
+
   root to: "groupreviews#index"
 
   get 'login', to: 'session#new'

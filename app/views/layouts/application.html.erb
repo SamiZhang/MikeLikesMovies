@@ -9,7 +9,6 @@
   <%= csrf_meta_tags %>
 </head>
 
-
 <body>
     <div id="header">
       <a id="logo" href ="/"><%= image_tag("mikelikes.png")%></a>
@@ -17,6 +16,7 @@
 
   <nav>
     <% if logged_in? %>
+      <a href = "/groups/new">Mike a group!</a>
       <%= link_to current_user.email, user_path(current_user) %>
       <%= link_to 'logout', logout_path, method: :delete%>
     <% else %>
