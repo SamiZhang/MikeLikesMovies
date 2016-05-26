@@ -1,3 +1,60 @@
-// Place all the styles related to the groupreviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.movie-cards{
+  outline: solid 1px black;
+  width: 250px;
+  height: 350px;
+  margin:20px;
+  margin-bottom: 25%;
+  box-shadow: 1px 1px 3px #888;
+}
+
+#movie-poster-cards {
+  height: 100%;
+  width: 250px;
+}
+
+#main-card {
+  font-family: Helvetica;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#group-name {
+  font-size: 14px;
+  bottom: 0;
+}
+#time {
+  font-size: 8px;
+  top:0;
+}
+
+#recent {
+  font-family: tahoma;
+}
+
+.group-reviews{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.movie-poster{
+  float: left;
+  margin-left: 35px;
+  margin-right: 7%;
+  max-width: 350px;
+  max-height:400px;
+  display:inline;
+}
+
+.reviews{
+  display:inline;
+  width: 50%;
+}
+
+span {
+  font-family: tahoma;
+  font-size: 10px;
+}
