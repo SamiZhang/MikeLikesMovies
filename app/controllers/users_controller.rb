@@ -1,14 +1,16 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render :new
   end
 
+  #this is for when mike creates a new user with just an email
   def create
     @user = User.new(user_params)
     @user.add_token
      if @user.save
-       UserMailer.invite_email(@user).deliver_later
+       UserMailer.invite_mailer(@user).deliver_later
        redirect_to root_path
     else
       render :new
