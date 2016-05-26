@@ -262,15 +262,15 @@
         1,
         null,
         1,
-        12,
-        12,
-        null,
-        12,
-        null,
-        12,
         0,
-        12,
-        12,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
         null,
         0,
         null,
@@ -512,12 +512,18 @@
         4,
         4,
         4,
+        4,
+        4,
         3,
         3,
         3,
         null,
         1,
         null,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         1,
@@ -589,6 +595,7 @@
         3,
         3,
         3,
+        3,
         null,
         null
       ],
@@ -626,7 +633,6 @@
         4,
         null,
         null,
-        null,
         null
       ],
       "/Users/apprentice/Desktop/movieApp/app/models/reviewer.rb": [
@@ -641,6 +647,6 @@
         null
       ]
     },
-    "timestamp": 1464292894
+    "timestamp": 1464296642
   }
 }

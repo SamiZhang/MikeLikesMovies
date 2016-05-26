@@ -20,7 +20,7 @@
       <%= link_to current_user.email, user_path(current_user) %>
       <%= link_to 'logout', logout_path, method: :delete%>
     <% else %>
-      <a href="/login">login</login>
+      <a href="/login">login</login></a>
     <% end %>
   </nav>
 
@@ -29,4 +29,3 @@
 
 </body>
 </html>
-

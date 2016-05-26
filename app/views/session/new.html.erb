@@ -1,24 +1,23 @@
-<div class = "container">
-  <h1 class="login">Login</h1>
+
+  <h1> Login</h1>
 
     <%= form_tag login_path do %>
 
-    <div>
+
       <% if flash.any? %>
         <% flash.each do |message_type, message| %>
           <%=message_type%> <%=message%>
         <% end %>
       <% end %>
-      <%end%>
-    </div>
+  <br>
 
-<div class="form">
+
+
   <%= label_tag :email %>
   <%= text_field_tag :email, params[:email] %>
 
   <%= label_tag :password %>
   <%= password_field_tag :password, params[:password]%>
 
-  <div class="submit"><%= submit_tag "Sign in" %></div>
-</div>
-</div>
+  <%= submit_tag "Sign in" %>
+<% end %>
