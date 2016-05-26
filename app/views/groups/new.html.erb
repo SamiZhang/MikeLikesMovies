@@ -5,3 +5,14 @@
   <%= f.text_field :group_name %>
   <%= f.submit "MIKES IT!" %>
 <% end %>
+
+<br><br>
+
+<h4>Current groups</h4>
+<% @groups.each do |group| %>
+<ul>
+  <p>
+    <%= link_to group.group_name, new_group_user_path(group.id) %>
+  </p>
+</ul>
+<% end %>
