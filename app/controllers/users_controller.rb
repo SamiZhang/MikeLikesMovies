@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.add_token
      if @user.save
-       UserMailer.invite_mailer(@user).deliver_later
+       UserMailer.invite_mailer(@user).deliver_now
        redirect_to root_path
     else
       render :new
