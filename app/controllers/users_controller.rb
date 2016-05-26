@@ -16,7 +16,7 @@ class UsersController < ApplicationController
      if @user.save
        Reviewer.create(user_id: @user.id, group_id: @group.id)
        UserMailer.invite_mailer(@user, @tempass).deliver
-       redirect :'/'
+       redirect '/'
     else
       render :new
     end
