@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @reviews = Review.find_by(user_id: params[:id])
+    @user = User.find(params[:id])
+    @reviews = Review.where(user_id: @user.id)
   end
 
   def set_password

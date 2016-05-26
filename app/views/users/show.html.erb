@@ -1,5 +1,21 @@
-<h2> these are reviews you've done </h2>
+<h2> Reviews you still need to complete: </h2>
 
 <% @reviews.each do |review| %>
-  <h4> <%= review.title %> </h4>
+  <% if !review_completed?(review) %>
+    <h4> <%= review.title %> </h4>
+  <% end %>
+<% end %>
+
+<h2> Reviews you have completed: </h2>
+
+<% @reviews.each do |review| %>
+  <% if review_completed?(review) %>
+    <h4> <%= review.title %> </h4>
+  <% end %>
+<% end %>
+
+<h2> Groups you are a part of: </h2>
+
+<% @user.groups.each do |group| %>
+  <h4> <%= group.group_name %>
 <% end %>
