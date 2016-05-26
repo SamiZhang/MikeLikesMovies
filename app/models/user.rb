@@ -10,5 +10,4 @@ class User < ActiveRecord::Base
     self.token = SecureRandom.hex(12)
   end
 
-
 end
