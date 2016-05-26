@@ -7,7 +7,7 @@ Rails.application.configure do
 
 config.action_mailer.default_url_options = {host: 'mikelikesmovies.herokuapp.com'}
 # SMTP settings for gmail
-config.action_mailer.delivery_method = :stmp
+config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
  :address              => "smtp.sendgrid.com",
  :port                 => 587,
