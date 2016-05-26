@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(email: "Mike@mike.mike", password: "likesbikes")
+User.create!(email: "mike@mike.mike", password: "likesbikes")
 
 5.times do
   User.create!(
@@ -50,7 +50,7 @@ Movie.create!(
 
 
 Group.create!(group_name: "Mikes Favorites")
-GroupReview.create!(group_id: 1, movie_id: 2, due_date: "1995-10-31")
+GroupReview.create!(group_id: 1, movie_id: 1, due_date: "1995-10-31")
 
 Group.create!(group_name: "Five guys named Mike")
 GroupReview.create!(group_id: 2, movie_id: 2, due_date: "1995-10-31")
