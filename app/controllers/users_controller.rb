@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
   def set_password
     @user.find_by(email: params[:email])
     if params[:token] == @user.token
