@@ -50,24 +50,24 @@ Movie.create!(
 
 
 Group.create!(group_name: "Mikes Favorites")
-GroupReview.create!(group_id: 1, movie_id: 1, due_date: "1995-10-31")
+GroupReview.create!(group_id: 1, movie_id: 1, due_date: "2012-10-31")
 
 Group.create!(group_name: "Five guys named Mike")
-GroupReview.create!(group_id: 2, movie_id: 2, due_date: "1995-10-31")
+GroupReview.create!(group_id: 2, movie_id: 2, due_date: "1990-10-31")
 
 Group.create!(group_name: "MikesWithBikes")
 GroupReview.create!(group_id: 3, movie_id: 4, due_date: "1995-10-31")
 
 Group.create!(group_name: "Movie Mikes")
-GroupReview.create!(group_id: 4, movie_id: 3, due_date: "1995-10-31")
+GroupReview.create!(group_id: 4, movie_id: 3, due_date: "2016-10-31")
 
 
 
 counter = 1
 5.times do
   Review.create!(
-    title: "Review Title",
-    body: "Review Body",
+    title: "A Film to Cherish",
+    body: "I love this move. This move rules. I love this move. This move rules.I love this move. This move rules.I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules.",
     user_id: counter,
     group_review_id: 1,
     cinematography_score: rand(6),
