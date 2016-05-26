@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :groups do
     resources :users
   end
+  resources :reviews
 
 
   root to: "groupreviews#index"

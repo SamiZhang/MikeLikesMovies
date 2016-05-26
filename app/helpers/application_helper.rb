@@ -14,4 +14,9 @@ def time_since(time)
     return "#{minutes} minute(s) ago"
   end
 end
+
+def review_completed?(review)
+  review.group_review.due_date.past?
+end
+
 end
