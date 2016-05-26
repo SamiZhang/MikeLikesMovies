@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   root to: "groupreviews#index"
 
+  # post 'invite' to: 'user#invite'
   get 'login', to: 'session#new'
   post 'login', to: 'session#create'
   delete 'logout', to: 'session#destroy'

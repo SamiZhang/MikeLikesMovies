@@ -13,10 +13,10 @@ class UsersController < ApplicationController
     @tempass = SecureRandom.hex(4)
     @user.password = @tempass
     @group = Group.find(params[:group_id])
-     if @user.save
-       Reviewer.create(user_id: @user.id, group_id: @group.id)
-       UserMailer.invite_mailer(@user, @tempass).deliver
-       redirect '/'
+    if @user.save
+      Reviewer.create(user: @user, group: @group)
+      UserMailer.invite_mailer(@user, @tempass).deliver
+      redirect '/'
     else
       render :new
     end
