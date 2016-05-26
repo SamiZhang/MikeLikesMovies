@@ -1,0 +1,9 @@
+<% if !review_completed?(@review) %>
+  <%= link_to "Edit this review", "/reviews/#{@review.id}/edit" %>
+<% else %>
+   <h2>This review is already published and cannot be edited </h2>
+<% end %>
+
+<%= @review.title %>
+<br>
+<%= @review.body %>
