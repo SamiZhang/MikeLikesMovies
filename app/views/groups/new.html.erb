@@ -2,6 +2,12 @@
 
   <h1 id="start-group">Start a new group</h1>
 
+<% if flash.any? %>
+  <% flash.each do |message_type, message| %>
+    <%=message%>
+  <% end %>
+<% end %>
+
   <div id="form">
     <%= form_for @group do |f| %>
       <%= f.text_field :group_name, placeholder: "Group Name" %><br>

@@ -1,6 +1,12 @@
 <div id="whole-grouppage">
   <h1 id="welcome-mike"> Hey Mike. Missed you.<br> Invite some people to <%= @group.group_name %>. </h1>
 
+<% if flash.any? %>
+  <% flash.each do |message_type, message| %>
+    <%=message%>
+  <% end %>
+<% end %>
+
 <%= form_for [@group, @user] do |f| %>
   <%= f.text_field :email, placeholder: "Enter their email" %> <br>
   <%= f.submit("Invite!") %>

@@ -16,8 +16,10 @@
 
   <nav>
     <% if logged_in? %>
+        <% if current_user.id == 1 %>
+            <a href = "/groups/new">mike a group</a>
+        <% end %>
       <%= link_to 'logout', logout_path, method: :delete%>
-      <a href = "/groups/new">mike a group</a>
       <%= link_to current_user.email, user_path(current_user) %>
     <% else %>
       <a href="/login">login</login></a>
