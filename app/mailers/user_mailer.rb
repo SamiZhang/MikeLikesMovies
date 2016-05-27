@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   def invite_mailer(user, tempass)
     @user = user
     @tempass = tempass
-    @url = "https://www.mikelikesmovies.herokuapp.com/login"
+    @url = "https://mikelikesmovies.herokuapp.com/login"
     mail(to: @user.email, subject: 'Come watch and review movies with Mike!')
   end
 end
