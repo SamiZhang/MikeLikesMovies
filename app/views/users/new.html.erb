@@ -1,7 +1,8 @@
-<h1> Mike, invite some people to <%= @group.group_name %> </h2>
+<div id="whole-grouppage">
+  <h1 id="welcome-mike"> Hey Mike. Missed you.<br> Invite some people to <%= @group.group_name %>. </h1>
 
 <%= form_for [@group, @user] do |f| %>
-  <%= f.label(:email, "Email") %>
-  <%= f.text_field(:email) %>
+  <%= f.text_field :email, placeholder: "Enter their email" %> <br>
   <%= f.submit("Invite!") %>
 <% end %>
+</div>

@@ -16,26 +16,26 @@ body {
 nav {
   top:0;
   position:absolute;
-  font-family: tahoma;
   font-size: 14px;
-  background-color: #F7F7F7;
+  background-color: whitesmoke;
   width: 100%;
   margin: 0;
-  font-color:#878787
 }
 
-a {
+nav a {
+  font-color:#878787;
   text-decoration: none;
   color: black;
   float:right;
   margin-right: 25px;
+  font-family: 'Quicksand', sans-serif;
 }
 
-a:hover {
+nav a:hover {
   color: red
 }
 
-a:visited{
+nav a:visited{
   font-color:#878787;
 }
 

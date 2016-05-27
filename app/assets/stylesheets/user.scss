@@ -1,3 +1,51 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#whole-page{
+  width: 650px;
+  margin: 0 auto;
+  font-family: tahoma;
+}
+
+#to-complete {
+  display: inline-block;
+  border-radius: 10px;
+  width: 650px;
+  padding: 2%;
+  background-color: whitesmoke;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#have-completed {
+  display: inline-block;
+  width: 650px;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: whitesmoke;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#group-membership {
+  display: inline-block;
+  border-radius: 10px;
+  width: 650px;
+  padding: 2%;
+  background-color: whitesmoke;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+  font-color: black;
+  font-family: tahoma;
+}
+
+a:visited {
+  color: black;
+}
+
+#welcome-mike{
+  font-family: tahoma;
+}
+

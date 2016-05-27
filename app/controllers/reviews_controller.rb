@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
     @review = Review.find(params[:id])
     render :show
   end

@@ -1,18 +1,21 @@
-<h1>Mike groups!</h1>
+<div id="whole-grouppage">
 
-<%= form_for @group do |f| %>
-  <%= f.label :group_name, "Name the group" %>
-  <%= f.text_field :group_name %>
-  <%= f.submit "MIKES IT!" %>
-<% end %>
+  <h1 id="start-group">Start a new group</h1>
 
-<br><br>
+  <div id="form">
+    <%= form_for @group do |f| %>
+      <%= f.text_field :group_name, placeholder: "Group Name" %><br>
+      <%= f.submit "MIKES IT!"%>
+    <% end %>
+  </div>
 
-<h4>Current groups</h4>
-<% @groups.each do |group| %>
-<ul>
-  <p>
-    <%= link_to group.group_name, new_group_user_path(group.id) %>
-  </p>
-</ul>
-<% end %>
+
+  <h4 id="current">Invite friends to exisiting groups</h4>
+  <% @groups.each do |group| %>
+  <ul id="grouplist">
+    <li id="groups">
+      <%= link_to group.group_name, new_group_user_path(group.id) %>
+    </li>
+  </ul>
+  <% end %>
+</div>
