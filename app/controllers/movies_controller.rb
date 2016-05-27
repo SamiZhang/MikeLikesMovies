@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(movie_params)
     @group = Group.find(params[:group_id])
      if @movie.save
-       @movie.group_review.create(group_id: @group.id)
+       GroupReview.create(group_id: @group.id, movie_id: @movie.id)
        redirect_to new_group_user_path(@group.id)
     else
       render :new
