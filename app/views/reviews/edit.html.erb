@@ -1,11 +1,13 @@
-<h1> edit your shit here </h1>
+<div id ="whole-grouppage">
+  <h1 id="edit"> Edit your shit here </h1>
 
-<%= form_for @review do |f| %>
-  <%= f.text_field :title, placeholder: "Title"%>
-  <br>
-  <br>
-  <%= f.text_area :body, placeholder: "Review Content" %>
-  <br>
-  <br>
-  <%= f.submit %>
-<% end %>
+  <%= form_for @review do |f| %>
+    <%= f.text_field :title%>
+    <br>
+    <br>
+    <%= f.text_area :body, size: "50x15"%>
+    <br>
+    <br>
+    <%= f.submit %>
+  <% end %>
+</div>

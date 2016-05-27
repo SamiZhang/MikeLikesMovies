@@ -1,19 +1,21 @@
+<div id ="whole-grouppage">
 <% if @review.title.length > 1 && @review.body.length > 1%>
 
   <% if !review_completed?(@review) %>
-    <%= link_to "Edit this review", "/reviews/#{@review.id}/edit" %>
+    <h2 id="edit-title"><%= link_to "Edit this review", "/reviews/#{@review.id}/edit" %></h2>
   <% else %>
-     <h2>This review is already published and cannot be edited </h2>
+     <h2 id="edit">This review is already published and cannot be edited </h2>
   <% end %>
 
-  <%= @review.title %>
+  <h3 id="review-title"><%= @review.title %></h3>
   <br>
-  <%= @review.body %>
+  <p id="review-body"><%= @review.body %></p>
+
 
 <% else %>
 
   <% if !review_completed?(@review) %>
-    <h2> Looks like you haven't done this review yet,
+    <h2 id="edit"> Looks like you haven't done this review yet,
       better do it soon so you dont dissapoint Mike </h2>
 
       <%= form_for @review do |f| %>
@@ -28,9 +30,9 @@
         <%= f.submit %>
       <% end %>
   <% else %>
-     <h2>You missed the due date and now Mike is mad at you </h2>
+     <h2 id="edit">You missed the due date and now Mike is mad at you </h2>
   <% end %>
 
 
 <% end %>
-  <%= @user.email %>
+</div>

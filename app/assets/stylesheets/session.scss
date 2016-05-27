@@ -1,0 +1,24 @@
+#login {
+  font-family: tahoma;
+}
+
+#error {
+  font-family: sans;
+  font-color: red;
+}
+
+input[type=password] {
+  border: 1px red solid;
+  height:25px;
+  width: 200px;
+}
+
+#review-title, #review-body {
+  font-family: tahoma;
+
+}
+
+#edit-title {
+  margin-bottom:40px;
+  text-decoration: underline;
+}
