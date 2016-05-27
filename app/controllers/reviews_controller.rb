@@ -9,6 +9,11 @@ class ReviewsController < ApplicationController
     render :show
   end
 
+  def create
+    @review = Review.find(params[:id])
+    render :show
+  end
+
   def edit
     @review = Review.find(params[:id])
     render :edit
