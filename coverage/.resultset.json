@@ -282,6 +282,17 @@
         0,
         null,
         null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/apprentice/Desktop/movieApp/app/helpers/groupreviews_helper.rb": [
@@ -393,10 +404,12 @@
         0,
         0,
         0,
+        0,
         null,
         null,
         null,
         1,
+        0,
         0,
         0,
         0,
@@ -694,6 +707,6 @@
         null
       ]
     },
-    "timestamp": 1464307660
+    "timestamp": 1464357730
   }
 }

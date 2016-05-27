@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  include ApplicationHelper
+
+  before_filter :authenticate!, except: [:index, :show] 
 
   def index
     @reviews = Review.all

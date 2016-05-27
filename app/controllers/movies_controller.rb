@@ -1,6 +1,9 @@
 class MoviesController < ApplicationController
+  include ApplicationHelper
+  before_filter :admin_authenticate
 
   def new
+    admin_authenticate
     @group = Group.find(params[:group_id])
     @greview = GroupReview.new
     @movie = Movie.new
@@ -9,6 +12,7 @@ class MoviesController < ApplicationController
 
   #this is for when mike creates a new user with just an email
   def create
+    admin_authenticate
     @movie = Movie.new(movie_params)
     @group = Group.find(params[:group_id])
      if @movie.save
