@@ -11,6 +11,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(user_params)
+    puts params
     if @group.save
       redirect_to new_group_movie_path(@group.id)
     else
