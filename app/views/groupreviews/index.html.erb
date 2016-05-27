@@ -1,19 +1,14 @@
 
 
 <div id="main-card">
-  <ul id ="myList">
 <% @groupreviews.order('due_date DESC').each do |groupreview| %>
 <a href="/groupreviews/<%=groupreview.id%>">
-  <li>
     <div class="movie-cards">
     <img id="movie-poster-cards" src=<%= groupreview.movie.poster_image %>>
     <div id="group-name">Reviewed by: <%= groupreview.group.group_name %></h3></div>
     </div>
-  </li>
+
 </a>
   <%end %>
 </ul>
 </div>
-
-<div id="loadMore">More</div>
-<div id="showLess">Less</div>
