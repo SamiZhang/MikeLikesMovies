@@ -1,5 +1,11 @@
 <h1> Mike, invite some people to <%= @group.group_name %> </h2>
 
+<% if flash.any? %>
+  <% flash.each do |message_type, message| %>
+    <%=message%>
+  <% end %>
+<% end %>
+
 <%= form_for [@group, @user] do |f| %>
   <%= f.label(:email, "Email") %>
   <%= f.text_field(:email) %>

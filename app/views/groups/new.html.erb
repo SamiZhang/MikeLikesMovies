@@ -1,5 +1,11 @@
 <h1>Mike groups!</h1>
 
+<% if flash.any? %>
+  <% flash.each do |message_type, message| %>
+    <%=message%>
+  <% end %>
+<% end %>
+
 <%= form_for @group do |f| %>
   <%= f.label :group_name, "Name the group" %>
   <%= f.text_field :group_name %>
