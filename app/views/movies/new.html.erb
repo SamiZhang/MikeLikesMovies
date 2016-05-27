@@ -8,5 +8,10 @@
   <%= f.label(:poster_image, "Picture Mike?") %>
   <%= f.text_field(:poster_image) %><br><br>
 
+  <%= f.fields_for @greview do |gr| %>
+    <%= gr.label(:due_date, "Review due date") %>
+    <%= gr.text_field(:due_date) %><br><br>
+  <% end %>
+
   <%= f.submit("Mike <3 movies") %>
 <% end %>
