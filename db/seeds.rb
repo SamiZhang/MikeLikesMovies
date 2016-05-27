@@ -71,20 +71,20 @@ Movie.create!(
     poster_image: "http://www.ew.com/sites/default/files/i/2015/12/04/michael-moore-02.jpg"
   )
 
-Group.create!(group_name: "Mikes Favorites")
-GroupReview.create!(group_id: 1, movie_id: 1, due_date: "2012-10-31")
+Group.create!(group_name: "Busch League")
+GroupReview.create!(group_id: 1, movie_id: 1, due_date: "2015-10-31")
 
 Group.create!(group_name: "Five guys named Mike")
-GroupReview.create!(group_id: 2, movie_id: 2, due_date: "1990-10-31")
+GroupReview.create!(group_id: 2, movie_id: 2, due_date: "2016-10-1")
 
 Group.create!(group_name: "MikesWithBikes")
-GroupReview.create!(group_id: 3, movie_id: 4, due_date: "1995-10-31")
+GroupReview.create!(group_id: 3, movie_id: 4, due_date: "2016-8-18")
 
 Group.create!(group_name: "Movie Mikes")
-GroupReview.create!(group_id: 4, movie_id: 3, due_date: "2016-10-31")
+GroupReview.create!(group_id: 4, movie_id: 3, due_date: "2015-5-31")
 
-Group.create!(group_name: "Movie Mikes")
-GroupReview.create!(group_id: 4, movie_id: 5, due_date: "2016-10-31")
+Group.create!(group_name: "mikeoverflow")
+GroupReview.create!(group_id: 5, movie_id: 5, due_date: "2016-6-1")
 
 counter = 1
 3.times do
