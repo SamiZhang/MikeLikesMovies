@@ -1,22 +1,46 @@
+<div id="whole-page">
 
-<h2> Reviews you still need to complete: </h2>
+<div id="to-complete">
+  <h2> Reviews to complete: </h2>
+  <p>
+    <% @reviews.each do |review| %>
+      <% if !review_completed?(review) %>
+       <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
+    <% end %>
+      <% end %>
+  </p>
+</div>
 
-<% @reviews.each do |review| %>
-  <% if !review_completed?(review) %>
-    <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
-  <% end %>
-<% end %>
 
+<<<<<<< HEAD
+=======
 <br><br><br><br>
 
 <h2> Reviews you have completed: </h2>
+>>>>>>> master
 
-<% @reviews.each do |review| %>
-  <% if review_completed?(review) %>
-  <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
+<div id="have-completed">
+  <h2> Reviews completed: </h2>
+  <% @reviews.each do |review| %>
+    <% if review_completed?(review) %>
+  <p class="review-info">
+    <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
+  </p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
+<<<<<<< HEAD
+
+<div id="group-membership">
+  <h2> Your groups: </h2>
+<p>
+  <% @user.groups.each do |group| %>
+    <h4> <%= group.group_name %>
+  <% end %>
+</p>
+</div>
+=======
 <br><br><br><br>
 
 <h2> Groups you are a part of: </h2>
@@ -24,4 +48,6 @@
 <% @user.groups.each do |group| %>
   <h4> <%= link_to group.group_name, group_path(group.id) %> </h4>
 <% end %>
+>>>>>>> master
 
+</div>

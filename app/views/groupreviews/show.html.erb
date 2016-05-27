@@ -1,11 +1,11 @@
-<div class="group-reviews">
+<div id="whole-grouppage-reviews">
 
   <img class = "movie-poster"  src= <%= @groupreview.movie.poster_image %> >
 
     <div class="reviews">
     <% @groupreview.reviews.each do |review| %>
-      <h2 ><%= review.title %></h2>
-      <p> <%= review.body %>
+      <h2 id="review-title" ><%= review.title %></h2>
+      <p id="review-body"> <%= review.body %>
         <br>
           <span> <%=review.user.email%></span>
       </p>

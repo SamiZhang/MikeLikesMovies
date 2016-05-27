@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <title>MovieApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -16,11 +16,11 @@
 
   <nav>
     <% if logged_in? %>
-      <% if current_user.id == 1 %>
-        <a href = "/groups/new">Mike a group!</a>
-      <% end %>
-      <%= link_to current_user.email, user_path(current_user) %>
+        <% if current_user.id == 1 %>
+            <a href = "/groups/new">mike a group</a>
+        <% end %>
       <%= link_to 'logout', logout_path, method: :delete%>
+      <%= link_to current_user.email, user_path(current_user) %>
     <% else %>
       <a href="/login">login</login></a>
     <% end %>
