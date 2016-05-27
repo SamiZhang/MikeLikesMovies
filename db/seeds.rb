@@ -20,6 +20,23 @@ counter = 1
   counter += 1
 end
 
+counter = 1
+5.times do
+  Reviewer.create!(user_id: counter, group_id: 2)
+  counter += 1
+end
+
+counter = 1
+5.times do
+  Reviewer.create!(user_id: counter, group_id: 3)
+  counter += 1
+end
+
+counter = 1
+5.times do
+  Reviewer.create!(user_id: counter, group_id: 4)
+  counter += 1
+end
 
   Movie.create!(
       title: "The Little Mermaid",

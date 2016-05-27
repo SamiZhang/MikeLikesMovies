@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(user_params)
     if @group.save
-      redirect_to new_group_user_path(@group.id)
+      redirect_to new_group_movie_path(@group.id)
     else
       render :new
     end

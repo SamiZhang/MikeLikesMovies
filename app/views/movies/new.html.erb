@@ -1,0 +1,17 @@
+<h1> Mike, pick a movie for <%= @group.group_name %> to review!</h2>
+
+<%= form_for [@group, @movie] do |f| %>
+  <%= f.label(:title, "Movie Title") %>
+  <%= f.text_field(:title) %><br><br>
+  <%= f.label(:body, "Description") %>
+  <%= f.text_field(:body) %><br><br>
+  <%= f.label(:poster_image, "Picture Mike?") %>
+  <%= f.text_field(:poster_image) %><br><br>
+
+  <%= f.fields_for @greview do |gr| %>
+    <%= gr.label(:due_date, "Review due date") %>
+    <%= gr.text_field(:due_date) %><br><br>
+  <% end %>
+
+  <%= f.submit("Mike <3 movies") %>
+<% end %>
