@@ -40,31 +40,36 @@ end
 
   Movie.create!(
       title: "The Little Mermaid",
-      body: Faker::Hipster.sentence,
-      poster_image: "http://ia.media-imdb.com/images/M/MV5BNTAxMzY0MjI1Nl5BMl5BanBnXkFtZTgwMTU2NTYxMTE@._V1_UY1200_CR89,0,630,1200_AL_.jpg"
+      body: "John Musker and Ron Clements",
+      poster_image: "http://www.impawards.com/1989/posters/little_mermaid_ver1.jpg"
     )
 
 
 Movie.create!(
     title: "Like Mike",
-    body: Faker::Hipster.sentence,
-    poster_image: "http://vignette3.wikia.nocookie.net/filmguide/images/8/8c/Like_Mike.jpg/revision/latest?cb=20150907213925"
+    body: "John Schultz",
+    poster_image: "http://www.impawards.com/2002/posters/like_mike_xlg.jpg"
   )
 
 
 Movie.create!(
     title: "Magic Mike",
-    body: Faker::Hipster.sentence,
+    body: "Steven Soderbergh",
     poster_image: "http://paradiseofpaonia.com/wp-content/uploads/2015/06/magic-mike-poster.jpg"
   )
 
 
 Movie.create!(
-    title: "Mikey",
-    body: Faker::Hipster.sentence,
-    poster_image: "https://upload.wikimedia.org/wikipedia/en/3/3c/Mikey_%28Film%29.jpg"
+    title: "Life with Mikey",
+    body: "James Lapine",
+    poster_image: "http://www.impawards.com/1993/posters/life_with_mikey.jpg"
   )
 
+Movie.create!(
+    title: "Where to Invade Next",
+    body: "Michael Moore",
+    poster_image: "http://www.ew.com/sites/default/files/i/2015/12/04/michael-moore-02.jpg"
+  )
 
 Group.create!(group_name: "Mikes Favorites")
 GroupReview.create!(group_id: 1, movie_id: 1, due_date: "2012-10-31")
@@ -78,68 +83,75 @@ GroupReview.create!(group_id: 3, movie_id: 4, due_date: "1995-10-31")
 Group.create!(group_name: "Movie Mikes")
 GroupReview.create!(group_id: 4, movie_id: 3, due_date: "2016-10-31")
 
-
+Group.create!(group_name: "Movie Mikes")
+GroupReview.create!(group_id: 4, movie_id: 5, due_date: "2016-10-31")
 
 counter = 1
-5.times do
+3.times do
   Review.create!(
     title: "A Film to Cherish",
     body: "I love this move. This move rules. I love this move. This move rules.I love this move. This move rules.I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules. I love this move. This move rules.",
     user_id: counter,
     group_review_id: 1,
-    cinematography_score: rand(6),
-    score_score: rand(6),
-    cast_score: rand(6),
-    direction_score: rand(6),
-    overall_score: rand(21)
+
   )
   counter += 1
 end
 
-counter = 1
-5.times do
   Review.create!(
-    title: "Review Title",
-    body: "Review Body",
-    user_id: counter,
+    title: "Like Mike - film of a lifetime!",
+    body: "The importance of family is central to Like Mike. Not only do Calvin and his friends want to be part of one, but Calvin can’t understand why Tracey is at odds with his father, and works to bring the two together (How can you have a dad and not talk to him?). Friendship, too, is highly valued. When Calvin and Murph are at odds, Tracey steps in to reunite them (Good friends are hard to come by). Sister Theresa stresses the importance of doing well in school and keeping up with homework. When Tracey wants nothing to do with Calvin, another Knight player befriends him (Take the locker next to mine). And even Tracey comes around and begins hanging out with Calvin and Murph. Gambling proves to be a man’s undoing. Calvin learns to take responsibility for his actions and makes mature decisions about his 'career' by desiring family over fame.",
+    user_id: 1,
     group_review_id: 2,
-    cinematography_score: rand(6),
-    score_score: rand(6),
-    cast_score: rand(6),
-    direction_score: rand(6),
-    overall_score: rand(21)
-  )
-  counter += 1
-end
+)
+
 
 counter = 1
-5.times do
+  Review.create!(
+    title: "A Must See Film",
+    body: "Pint-size rap music star Lil Bow Wow shows that he can play ball as well as he raps in this youth-oriented comedy about a young boy whose dream comes true in an unexpected way. Calvin Cambridge (Lil Bow Wow) is a 14-year-old boy, who, since the death of his parents, has been living in an orphanage run by the unpleasantly eccentric Stan Bittleman (Crispin Glover). ",
+    user_id: 2,
+    group_review_id: 2,
+)
+
+
+counter = 1
+4.times do
   Review.create!(
     title: "Review Title",
     body: "Review Body",
     user_id: counter,
     group_review_id: 3,
-    cinematography_score: rand(6),
-    score_score: rand(6),
-    cast_score: rand(6),
-    direction_score: rand(6),
-    overall_score: rand(21)
   )
   counter += 1
 end
 
 counter = 1
-5.times do
+3.times do
   Review.create!(
     title: "Review Title",
     body: "Review Body",
     user_id: counter,
     group_review_id: 4,
-    cinematography_score: rand(6),
-    score_score: rand(6),
-    cast_score: rand(6),
-    direction_score: rand(6),
-    overall_score: rand(21)
   )
   counter += 1
 end
+
+counter = 1
+  Review.create!(
+    title: "Surprising yet Not",
+    body: "It comes billed not as a documentary but a comedy, and the first joke is its hilariously misleading title. You think it anticipates a stern, leftist denunciation of American foreign policy. Instead, Moore tells us the Joint Chiefs of Staff invited him to Washington, DC, to confess that all their wars since “the big one” have been disastrous and ask his advice. He responds by offering himself up as a one-man army who will “invade countries populated by Caucasians whose names I can mostly pronounce, take the things we need from them, and bring them back home to the United States of America.”",
+    user_id: counter,
+    group_review_id: 5,
+  )
+  counter += 1
+
+counter = 1
+  Review.create!(
+    title: "EH",
+    body: "There's something undeniably sharp and buoyant about Moore's globe-trotting, grass-is-greener approach that compels indulgence and attention.",
+    user_id: counter,
+    group_review_id: 4,
+  )
+  counter += 1
+

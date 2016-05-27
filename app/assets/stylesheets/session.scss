@@ -19,6 +19,17 @@ input[type=password] {
 }
 
 #edit-title {
+  margin-top: 0;
   margin-bottom:40px;
   text-decoration: underline;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+#title {
+  font-family: sans-serif;
+  font-stretch: extra-expanded;
+  font-size: 3em;
+  margin-bottom: 10px;
+
 }

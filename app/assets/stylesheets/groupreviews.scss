@@ -36,40 +36,22 @@
 .movie-poster {
     float: left;
     margin-left: 35px;
-    margin-right: 7%;
     max-width: 350px;
     max-height: 400px;
     display: inline;
+    margin-bottom: 25px;
 }
 .reviews {
-    display: inline;
-    width: 50%;
+    clear: both;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #E8E8E8
 }
 span {
     font-family: tahoma;
     font-size: 10px;
 }
-/*#myList li {
-    display: none;
-    list-style: none;
-}
-#loadMore {
-    color: black;
-    cursor: pointer;
-    font-family: tahoma;
-}
-#loadMore:hover {
-    color: red;
-}
-#showLess {
-    color: black;
-    cursor: pointer;
-    font-family: tahoma;
-}
-#showLess:hover {
-    color: red;
-}
-*/
+
 #whole-grouppage-reviews {
   margin: 0 auto;
   margin-top: 75px;
@@ -82,4 +64,22 @@ span {
 
 #review-title, #review-body {
   font-family: tahoma;
+}
+
+#movie-info {
+float: right;
+display:inline-block;
+text-align: left;
+width: 50%;
+}
+
+#movietitle{
+    font-family: tahoma;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+#reviewbody {
+    font-family: tahoma;
+    font-size: 14px;
 }

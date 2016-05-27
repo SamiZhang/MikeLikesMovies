@@ -1,9 +1,9 @@
 <div id="whole-grouppage">
-  <h1 id="welcome-mike"> Hey Mike. Missed you.<br> Invite some people to <%= @group.group_name %>. </h1>
+  <h1 id="welcome-mike"> Hey Mike.<br> Invite some people to <%= @group.group_name %>. </h1>
 
 <% if flash.any? %>
   <% flash.each do |message_type, message| %>
-    <%=message%>
+    <p id="flash-message"><%=message%></p>
   <% end %>
 <% end %>
 
