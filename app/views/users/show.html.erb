@@ -2,10 +2,17 @@
 
 <div id="to-complete">
   <h2> Reviews to complete: </h2>
-  <p>
+  <p> asdfasdfasdf
     <% @reviews.each do |review| %>
       <% if !review_completed?(review) %>
-       <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
+      <h4> asdfasdfasdf </h4>
+        <% if review.title.length > 1 && review.body.length > 1%>
+            <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
+            <h4> test </h4>
+        <% else %>
+          <h4> test </h4>
+          <%= link_to "Create a new review for:" + review.group_review.movie.title, "/reviews/#{review.id}" %>
+        <% end %>
     <% end %>
       <% end %>
   </p>

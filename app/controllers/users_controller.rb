@@ -14,7 +14,9 @@ class UsersController < ApplicationController
     @user.password = @tempass
     @group = Group.find(params[:group_id])
     if @user.save
-      Reviewer.create(user: @user, group: @group)
+      @reviewer = Reviewer.create(user_id: @user.id, group_id: @group.id)
+      @groupreview = GroupReview.find_by(group_id: @group.id)
+      Review.create(title: "", body: "", user_id: @user.id, group_review_id: @groupreview.id )
       UserMailer.invite_mailer(@user, @tempass).deliver
       redirect_to '/'
     else
@@ -26,6 +28,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reviews = @user.reviews
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    puts @reviews
   end
 
   def set_password
