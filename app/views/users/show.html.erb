@@ -7,6 +7,8 @@
   <% end %>
 <% end %>
 
+<br><br><br><br>
+
 <h2> Reviews you have completed: </h2>
 
 <% @reviews.each do |review| %>
@@ -15,8 +17,10 @@
   <% end %>
 <% end %>
 
+<br><br><br><br>
+
 <h2> Groups you are a part of: </h2>
 
 <% @user.groups.each do |group| %>
-  <h4> <%= group.group_name %>
+  <h4> <%= link_to group.group_name, group_path(group.id) %> </h4>
 <% end %>
