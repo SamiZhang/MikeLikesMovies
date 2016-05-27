@@ -26,7 +26,7 @@
   <h2> Your groups: </h2>
 <p>
   <% @user.groups.each do |group| %>
-    <h4> <%= group.group_name %>
+    <h4> <%= link_to group.group_name, group_path(group.id) %> </h4>
   <% end %>
 </p>
 </div>
