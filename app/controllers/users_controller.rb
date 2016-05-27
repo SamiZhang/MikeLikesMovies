@@ -18,7 +18,8 @@ class UsersController < ApplicationController
        UserMailer.invite_mailer(@user, @tempass).deliver_later
        redirect_to root_path
     else
-      render :new
+      flash[:empty] = "Field cannot be empty!"
+      redirect_to new_group_user_path
     end
   end
 

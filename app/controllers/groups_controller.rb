@@ -11,7 +11,8 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to new_group_movie_path(@group.id)
     else
-      render :new
+      flash[:empty] = "Field cannot be empty!"
+      redirect_to new_group_path
     end
   end
 

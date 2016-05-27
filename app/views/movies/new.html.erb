@@ -1,5 +1,11 @@
 <h1> Mike, pick a movie for <%= @group.group_name %> to review!</h2>
 
+<% if flash.any? %>
+  <% flash.each do |message_type, message| %>
+    <%=message%>
+  <% end %>
+<% end %>
+
 <%= form_for [@group, @movie] do |f| %>
   <%= f.label(:title, "Movie Title") %>
   <%= f.text_field(:title) %><br><br>

@@ -16,7 +16,8 @@ class MoviesController < ApplicationController
        review = GroupReview.create(group_id: @group.id, movie_id: @movie.id, due_date: params[:movie][:group_review][:due_date])
        redirect_to new_group_user_path(@group.id)
     else
-      render :new
+      flash[:empty] = "Field(s) cannot be empty!"
+      redirect_to new_group_movie_path
     end
   end
 
