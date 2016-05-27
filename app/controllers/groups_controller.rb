@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  include ApplicationHelper
+
+  before_filter :admin_authenticate
 
   def new
     @group = Group.new

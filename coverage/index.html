@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-26T19:07:40-05:00">2016-05-26T19:07:40-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-27T09:02:10-05:00">2016-05-27T09:02:10-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">78.7%</span></span>
+    (<span class="covered_percent"><span class="red">77.19%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.92
+         0.9
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>41</b> files in total.
-    <b>277</b> relevant lines. 
-    <span class="green"><b>218</b> lines covered</span> and
-    <span class="red"><b>59</b> lines missed </span>
+    <b>285</b> relevant lines. 
+    <span class="green"><b>220</b> lines covered</span> and
+    <span class="red"><b>65</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,11 +82,11 @@
       
       <tr>
         <td class="strong"><a href="#2c00972477aef4509585717776d2041b0be90fb5" class="src_link" title="app/controllers/movies_controller.rb">app/controllers/movies_controller.rb</a></td>
-        <td class="red strong">33.33 %</td>
-        <td>26</td>
-        <td>15</td>
+        <td class="red strong">29.41 %</td>
+        <td>28</td>
+        <td>17</td>
         <td>5</td>
-        <td>10</td>
+        <td>12</td>
         <td>0.3</td>
       </tr>
       
@@ -122,11 +122,11 @@
       
       <tr>
         <td class="strong"><a href="#e8ffb196d938990d8e4ec5d9ded83a2ff4f96d98" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
-        <td class="red strong">25.0 %</td>
-        <td>22</td>
-        <td>12</td>
-        <td>3</td>
-        <td>9</td>
+        <td class="red strong">27.78 %</td>
+        <td>33</td>
+        <td>18</td>
+        <td>5</td>
+        <td>13</td>
         <td>0.3</td>
       </tr>
       
@@ -755,11 +755,11 @@
         <div class="source_table" id="2c00972477aef4509585717776d2041b0be90fb5">
   <div class="header">
     <h3>app/controllers/movies_controller.rb</h3>
-    <h4><span class="red">33.33 %</span> covered</h4>
+    <h4><span class="red">29.41 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
+      <b>17</b> relevant lines. 
       <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
   </div>
   
@@ -793,130 +793,142 @@
         <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">    @movie = Movie.new</code>
+          <code class="ruby">    @greview = GroupReview.new</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">    render :new</code>
+          <code class="ruby">    @movie = Movie.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    render :new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
           <code class="ruby">  #this is for when mike creates a new user with just an email</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
           <code class="ruby">    @movie = Movie.new(movie_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
           <code class="ruby">    @group = Group.find(params[:group_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">     if @movie.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
-          
-          <code class="ruby">       GroupReview.create(group_id: @group.id, movie_id: @movie.id)</code>
-        </li>
-      
         <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby">       redirect_to new_group_user_path(@group.id)</code>
+          <code class="ruby">       p params[:due_date]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">       review = GroupReview.create(group_id: @group.id, movie_id: @movie.id, due_date: params[:movie][:group_review][:due_date])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="17">
           
           
-          <code class="ruby">      render :new</code>
+          <code class="ruby">       redirect_to new_group_user_path(@group.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="19">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      render :new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def movie_params</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
-          
-          <code class="ruby">    params.require(:movie).permit(:title, :body, :poster_image)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def movie_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">    params.require(:movie).permit(:title, :body, :poster_image)</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
@@ -1583,11 +1595,11 @@
         <div class="source_table" id="e8ffb196d938990d8e4ec5d9ded83a2ff4f96d98">
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
-    <h4><span class="red">25.0 %</span> covered</h4>
+    <h4><span class="red">27.78 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <b>18</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>13</b> lines missed.</span>
     </div>
   </div>
   
@@ -1609,19 +1621,19 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">def time_since(time)</code>
+          <code class="ruby">  def time_since(time)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby">  hours = ((Time.now - time) / 3600).round</code>
+          <code class="ruby">    hours = ((Time.now - time) / 3600).round</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">  minutes = ((Time.now - time) / 60).round</code>
+          <code class="ruby">    minutes = ((Time.now - time) / 60).round</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -1633,7 +1645,7 @@
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">  return &quot;#{(hours / 24).round} day(s) ago&quot; if hours &gt; 24</code>
+          <code class="ruby">    return &quot;#{(hours / 24).round} day(s) ago&quot; if hours &gt; 24</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -1645,49 +1657,49 @@
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">  if minutes &lt; 1</code>
+          <code class="ruby">    if minutes &lt; 1</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">    return &quot;#{(minutes * 60).round} seconds ago&quot;</code>
+          <code class="ruby">      return &quot;#{(minutes * 60).round} seconds ago&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">  elsif minutes &gt;= 60</code>
+          <code class="ruby">    elsif minutes &gt;= 60</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    return &quot;#{hours} hour(s) ago&quot;</code>
+          <code class="ruby">      return &quot;#{hours} hour(s) ago&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">  else</code>
+          <code class="ruby">    else</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">    return &quot;#{minutes} minute(s) ago&quot;</code>
+          <code class="ruby">      return &quot;#{minutes} minute(s) ago&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -1699,19 +1711,19 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">def review_completed?(review)</code>
+          <code class="ruby">  def review_completed?(review)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="19">
           
           
-          <code class="ruby">  review.group_review.due_date.past?</code>
+          <code class="ruby">    review.group_review.due_date.past?</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -1720,7 +1732,73 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def current_user</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def admin_authenticate</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">    @admin = User.find(1)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">    if current_user != @admin</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">      redirect_to &#39;/&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">end</code>

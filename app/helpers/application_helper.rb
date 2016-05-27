@@ -25,9 +25,14 @@ module ApplicationHelper
 
   def admin_authenticate
     @admin = User.find(1)
-    if current_user != @admin
+    if session[:user_id] != @admin.id
       redirect_to '/'
     end
   end
+
+
+def authenticate!
+  redirect_to '/' unless session[:user_id]
+end
 
 end
