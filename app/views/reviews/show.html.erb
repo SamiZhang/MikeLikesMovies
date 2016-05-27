@@ -1,10 +1,11 @@
 <div id ="whole-grouppage">
+  <h1 id="title"> <%= @review.group_review.movie.title %>
 <% if @review.title.length > 1 && @review.body.length > 1%>
 
   <% if !review_completed?(@review) %>
     <h2 id="edit-title"><%= link_to "Edit this review", "/reviews/#{@review.id}/edit" %></h2>
   <% else %>
-     <h2 id="edit">This review is already published and cannot be edited </h2>
+     <h2 id="edit-title">This review is already published and cannot be edited </h2>
   <% end %>
 
   <h3 id="review-title"><%= @review.title %></h3>
@@ -16,21 +17,20 @@
 
   <% if !review_completed?(@review) %>
     <h2 id="edit"> Looks like you haven't done this review yet,
-      better do it soon so you dont dissapoint Mike </h2>
+      better do it soon so you dont dissapoint Mike. </h2>
 
       <%= form_for @review do |f| %>
-        <%= f.label :title %> <br>
-        <%= f.text_field :title%>
+        <%= f.text_field :title, placeholder: "Title"%>
         <br>
         <br>
-        <%= f.label :body %> <br>
-        <%= f.text_area :body %>
+
+        <%= f.text_area :body, placeholder: "Content" %>
         <br>
         <br>
         <%= f.submit %>
       <% end %>
   <% else %>
-     <h2 id="edit">You missed the due date and now Mike is mad at you </h2>
+     <h2 id="edit">You missed the due date and now Mike is mad at you. </h2>
   <% end %>
 
 

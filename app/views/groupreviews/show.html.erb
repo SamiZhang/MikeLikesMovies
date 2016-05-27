@@ -1,17 +1,21 @@
 <div id="whole-grouppage-reviews">
 
+  <div id="movie-info">
+    <h2 id="movietitle"><%= @groupreview.movie.title %></h2> <br>
+     <p id="reviewbody"> Directed by <%= @groupreview.movie.body %> </p>
+  </div>
   <img class = "movie-poster"  src= <%= @groupreview.movie.poster_image %> >
+    <% @groupreview.reviews.each do |review| %>
 
     <div class="reviews">
-    <% @groupreview.reviews.each do |review| %>
       <h2 id="review-title" ><%= review.title %></h2>
       <p id="review-body"> <%= review.body %>
         <br>
           <span> <%=review.user.email%></span>
+  </div>
       </p>
 
     <%end%>
-  </div>
 
 </div>
 

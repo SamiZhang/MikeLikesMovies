@@ -6,7 +6,7 @@
 
       <% if flash.any? %>
         <% flash.each do |message_type, message| %>
-          <p id="error"><%=message%></p>
+          <p id="flash-message"><%=message%></p>
         <% end %>
       <% end %>
   <br>

@@ -1,23 +1,26 @@
-<h1> Mike, pick a movie for <%= @group.group_name %> to review!</h2>
+<div id="whole-grouppage">
+
+<h1 id="edit"> Mike, pick a movie for <%= @group.group_name %> to review.</h2>
 
 <% if flash.any? %>
   <% flash.each do |message_type, message| %>
-    <%=message%>
+    <p id="flash-message"><%=message%></p>
   <% end %>
 <% end %>
 
 <%= form_for [@group, @movie] do |f| %>
-  <%= f.label(:title, "Movie Title") %>
-  <%= f.text_field(:title) %><br><br>
-  <%= f.label(:body, "Description") %>
-  <%= f.text_field(:body) %><br><br>
-  <%= f.label(:poster_image, "Picture Mike?") %>
-  <%= f.text_field(:poster_image) %><br><br>
+
+  <%= f.text_field :title, placeholder: "Title" %><br><br>
+
+  <%= f.text_field :body, placeholder: "Description" %><br><br>
+
+  <%= f.text_field :poster_image, placeholder: "Image URL"  %><br><br>
 
   <%= f.fields_for @greview do |gr| %>
-    <%= gr.label(:due_date, "Review due date") %>
-    <%= gr.text_field(:due_date) %><br><br>
+
+    <%= gr.text_field :due_date, placeholder: "Due Date" %><br><br>
   <% end %>
 
   <%= f.submit("Mike <3 movies") %>
 <% end %>
+</div>

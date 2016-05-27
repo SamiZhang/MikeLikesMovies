@@ -5,7 +5,7 @@
   <p>
     <% @reviews.each do |review| %>
       <% if !review_completed?(review) %>
-       <h4> <%= link_to review.title, "/reviews/#{review.id}" %> </h4>
+       <h4> <%= link_to review.group_review.movie.title, "/reviews/#{review.id}" %> </h4>
     <% end %>
       <% end %>
   </p>
